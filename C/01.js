@@ -69,3 +69,38 @@ mostrar(4);
 
 mostrar("no es un número", "texto");
 // El primer argumento no es un número.
+
+console.log("Ejercicio 06:");
+let nombre = "Seba"
+let apellido = "Dalpra"
+
+function mostrarNombreApellido (nombre, apellido) {
+    nombre = nombre.charAt(0).toUpperCase() + nombre.slice(1).toLowerCase();
+    
+    console.log(apellido.toUpperCase() + ", " + nombre)
+}
+
+mostrarNombreApellido(nombre, apellido)
+
+console.log("Ejercicio 07:");
+
+function truncate(cadena, longitud) {
+    if (cadena.length > longitud) {
+        console.log(cadena + "...");
+    }
+}
+
+truncate("Hola Mundo", 5); // "Hola Mundo..."
+
+console.log("Ejercicio 08:");
+
+function crearArray(...numeros){
+    let array = [];
+    for (let i = 0; i < numeros.length; i++) {
+        array.push(numeros);
+    }
+    console.log(numeros);
+    return array;
+}
+
+crearArray(1, 2, 3, 4, 5); 
