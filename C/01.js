@@ -104,3 +104,38 @@ function crearArray(...numeros){
 }
 
 crearArray(1, 2, 3, 4, 5); 
+
+console.log("Ejercicio 09:");
+
+const frutas = ["manzana", "banana"];
+
+function copiarArray(arrayOriginal, ...array){
+    let nuevoArray = arrayOriginal
+    nuevoArray.push(...array);
+    console.log(nuevoArray);
+    return nuevoArray;
+}
+
+copiarArray(frutas, "naranja"); // ["manzana", "banana", "naranja"]
+
+console.log("Ejercicio 10:");
+estilos = ["jazz", "blues"];
+estilos.push("rock-n-roll");
+console.log("Array antes: " + estilos)
+
+function reemplazarValorMedioArray(array, nuevoValor) {
+    if (array.length % 2 == 0) {
+        console.log("El array debe tener un número impar de elementos.");
+        return;
+    }
+    else {
+        let medio = Math.floor(array.length / 2);
+        array[medio] = nuevoValor;
+        console.log(array);
+        return array;
+    }
+}
+
+reemplazarValorMedioArray(estilos, "Heavy Metal"); 
+
+console.log("Ejercicio 11:");
