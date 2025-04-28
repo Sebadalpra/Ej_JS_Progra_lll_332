@@ -139,3 +139,49 @@ function reemplazarValorMedioArray(array, nuevoValor) {
 reemplazarValorMedioArray(estilos, "Heavy Metal"); 
 
 console.log("Ejercicio 11:");
+
+function minusculasOMayusculas(string) {
+    if (/[A-Z]/.test(string) && /[a-z]/.test(string)) {
+        console.log("String con mayúsculas y minúsculas: " + string);
+    }
+    else if (/[a-z]/.test(string)) {
+        console.log("String con minúsculas. " + string);
+    } 
+    else if (/[A-Z]/.test(string)) {
+        console.log("String con mayúsculas. " + string);
+    };
+}
+
+minusculasOMayusculas("HOLA MUNDO"); // String con mayúsculas: HOLA MUNDO
+minusculasOMayusculas("hola mundo"); // String con minúsculas: hola mundo
+minusculasOMayusculas("Hola Mundo"); // String con mayúsculas y minúsculas: Hola Mundo
+
+console.log("Ejercicio 12:");
+
+function detectarPalindromo(string) {
+    array = [];
+
+    let texto = string.toLowerCase().replace(/\s/g, "");
+    //console.log("Texto antes: " + texto)
+
+    for (let index = texto.length; index >= 0; index--) {
+        const element = texto[index];
+        array.push(element)
+    }
+    
+    let textoNuevo = array.join('');
+    //console.log("Texto despues: " + textoNuevo);
+
+        // verificar
+    if (texto == textoNuevo) {
+        console.log("Es Palindromo")
+    }
+    else {
+        console.log("No es palindromo.")
+    }
+    
+}
+
+detectarPalindromo("La ruta nos aporto otro paso natural"); // true
+detectarPalindromo("La ruta no nos aporto otro paso natural"); // false
+
